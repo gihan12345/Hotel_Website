@@ -1,5 +1,3 @@
-import React from "react";
-
 const HomePage = () => (
     <div className="min-h-screen bg-blue-50">
         <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50">
