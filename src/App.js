@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Logo_section from './components/Logo_section';
 import About from './pages/About_us';
 import Rooms from './pages/Rooms';
+import RoomGrid from './pages/RoomGrid';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/rooms" element={<Rooms />} />
+        <Route path="/rooms/:category" element={<RoomGrid />} />
 
       </Routes>
       
