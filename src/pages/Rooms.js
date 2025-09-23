@@ -1,26 +1,29 @@
-import { RoomCard } from "../components/RoomCard";
+import { Link } from 'react-router-dom';
+import standardImg from '../assets/hotel.jpg';
+import deluxeImg from '../assets/hotel.jpg';
+import suiteImg from '../assets/hotel.jpg';
 
-// Room Grid function
+// Display room categories with larger images for navigation
 function Rooms() {
+    const categories = [
+        { name: 'Standard Rooms', path: '/rooms/standard', image: standardImg },
+        { name: 'Deluxe Rooms', path: '/rooms/deluxe', image: deluxeImg },
+        { name: 'Suites', path: '/rooms/suites', image: suiteImg },
+    ];
+
     return (
         <div className="min-h-screen py-12 bg-blue-50">
             <h2 className="mb-8 text-4xl font-bold text-center text-blue-700">Our Rooms</h2>
-            <div className="container grid grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {RoomCard.map((room, idx) => (
-                    <div
+            <div className="container grid grid-cols-1 gap-10 px-4 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+                {categories.map((category, idx) => (
+                    <Link
                         key={idx}
-                        className="flex flex-col overflow-hidden transition-transform duration-300 bg-white rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2"
+                        to={category.path}
+                        className="flex flex-col items-center p-8 transition-transform duration-300 bg-white rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2"
                     >
-                        <img src={room.image} alt={room.name} className="object-cover w-full h-48" />
-                        <div className="flex flex-col flex-1 p-4">
-                            <h3 className="mb-2 text-xl font-semibold text-blue-700">{room.name}</h3>
-                            <p className="flex-1 mb-4 text-gray-600">{room.description}</p>
-                            <div className="flex items-center justify-between">
-                                <span className="font-bold text-blue-600">{room.price}</span>
-                                <button className="px-4 py-2 text-white transition bg-blue-600 rounded hover:bg-blue-700">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
+                        <img src={category.image} alt={category.name} className="object-cover w-full h-64 rounded-t-lg" />
+                        <h3 className="mt-6 text-xl font-semibold text-blue-700">{category.name}</h3>
+                    </Link>
                 ))}
             </div>
         </div>
