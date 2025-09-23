@@ -5,7 +5,7 @@ function About() {
     return (
         <div className="min-h-screen bg-blue-50">
         
-            <div className="container flex flex-col items-center gap-12 px-4 py-12 mx-auto md:flex-row">
+            <div className="container flex flex-col items-center gap-12 px-4 py-24 mx-auto md:flex-row">
                 {/* Image */}
                 <Link to="/"><img src={logo_AboutUs} alt="about us image" className="w-full rounded-lg shadow-lg"/></Link>
                 
