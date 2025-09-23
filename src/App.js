@@ -9,6 +9,7 @@ import Rooms from './pages/Rooms';
 import RoomGrid from './pages/RoomGrid';
 import Facilities from './pages/Facilities';
 import Gallery from './pages/Gallery';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
 
       </Routes>
+      <Footer />
       
     </Router>
   );
