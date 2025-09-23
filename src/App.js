@@ -10,6 +10,7 @@ import RoomGrid from './pages/RoomGrid';
 import Facilities from './pages/Facilities';
 import Gallery from './pages/Gallery';
 import Footer from './components/Footer';
+import Contact from './pages/ContactUs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/rooms/:category" element={<RoomGrid />} />
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
 
       </Routes>
       <Footer />
