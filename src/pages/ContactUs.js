@@ -16,7 +16,7 @@ function Contact() {
     return (
         <div className="container p-8 mx-auto">
             <h2 className="mb-4 text-3xl font-bold">Contact Us</h2>
-            <p>Phone: +94 771344076 | Email: gihanmadhubhashana@gmail.com | Address: 123 Main St</p>
+            <p>Phone: +1-800-555-1234 | Email: info@luxuryhotel.com | Address: 123 Luxury Lane, City Center</p>
             {/* Google Map */}
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15825.123456789!2d80.1303641!3d7.076109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDQnMzQuMCJOIDgwwrAwNyc1OC42IkU!5e0!3m2!1sen!2slk!4v1695519600!5m2!1sen!2slk"

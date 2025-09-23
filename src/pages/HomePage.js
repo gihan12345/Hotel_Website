@@ -6,6 +6,7 @@ import hero1 from '../assets/swimming pool.jpg';
 import hero2 from '../assets/Suite room.jpg';
 import hero3 from '../assets/swimming pool.jpg';
 import hero4 from '../assets/Suite room.jpg';
+import { Link } from 'react-router-dom';
 
 // Slider settings for autoplay and responsiveness
 const sliderSettings = {
@@ -54,9 +55,11 @@ const HomePage = () => {
                             <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
                                 <h1 className="mb-4 text-5xl font-bold md:text-6xl drop-shadow-lg">Welcome to Our Luxury Hotel</h1>
                                 <p className="mb-8 text-xl md:text-2xl drop-shadow-md">Experience unparalleled comfort and exquisite service.</p>
+                                <Link to="/contact">
                                 <button className="px-8 py-3 font-semibold text-blue-700 transition duration-300 bg-white rounded-lg shadow-md hover:bg-blue-100">
                                     Book Now
                                 </button>
+                                </Link>
                             </div>
                         </div>
                     );
