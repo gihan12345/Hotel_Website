@@ -5,7 +5,7 @@ import RoomCard4 from "../assets/Deluxy room.jpg";
 import RoomCard5 from "../assets/Suite room.jpg";
 import RoomCard6 from "../assets/Suite room.jpg";
 
-// Define room data for different categories
+//room data for different categories
 export const roomsData = {
     standard: [
         { name: 'Standard Room 1', description: 'Cozy and affordable single room', price: '$100/night', image: RoomCard1 },

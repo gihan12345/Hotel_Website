@@ -1,4 +1,4 @@
-// Define hotel facilities data with images
+//hotel facilities data with images
 import poolImg from "../assets/swimming pool.jpg";
 import spaImg from '../assets/Visit our Thalasso Spa.jpg';
 import gymImg from '../assets/gym.jpg';
