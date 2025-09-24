@@ -3,21 +3,19 @@ import logo from "../assets/logo.png";
 
 function Logo_section() {
     return (
-        <div className="relative h-[10vh] bg-white flex items-center justify-between px-8">
-            {/* Logo and text */}
-            <div className="flex items-center">
+        <div className="relative h-[10vh] bg-white flex items-center justify-between px-4 sm:px-6 md:px-8">
+            <div className="flex flex-col items-center sm:flex-row">
                 <Link to="/">
-                    <img src={logo} alt="Hotel Logo" className="h-20 mb-1 mr-4" />
+                    <img src={logo} alt="Hotel Logo" className="h-16 mb-2 sm:h-20 sm:mb-0 sm:mr-4" />
                 </Link>
-                <div>
-                    <h1 className="text-2xl font-bold">Luxury Hotels</h1>
-                    <p>Welcome to Luxury Hotel</p>
+                <div className="text-center sm:text-left">
+                    <h1 className="text-xl font-bold sm:text-2xl">Luxury Hotels</h1>
+                    <p className="text-sm sm:text-base">Welcome to Luxury Hotel</p>
                 </div>
             </div>
-            {/* Buttons */}
-            <div className="flex space-x-4">
-                <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Login</button>
-                <button className="px-4 py-2 bg-gray-200 text-blue-700 rounded hover:bg-gray-300 transition">Sign Up</button>
+            <div className="flex flex-col mt-2 space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4 sm:mt-0">
+                <button className="px-3 py-1 text-white transition bg-blue-600 rounded sm:px-4 sm:py-2 hover:bg-blue-700">Login</button>
+                <button className="px-3 py-1 text-blue-700 transition bg-gray-200 rounded sm:px-4 sm:py-2 hover:bg-gray-300">Sign Up</button>
             </div>
         </div>
     );
