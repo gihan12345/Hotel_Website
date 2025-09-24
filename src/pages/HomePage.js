@@ -7,6 +7,7 @@ import hero2 from '../assets/Suite room.jpg';
 import hero3 from '../assets/swimming pool.jpg';
 import hero4 from '../assets/Suite room.jpg';
 import { Link } from 'react-router-dom';
+import { facilitiesData } from '../data/facilities';
 
 // Slider settings for autoplay and responsiveness
 const sliderSettings = {
@@ -22,6 +23,23 @@ const sliderSettings = {
     responsive: [
         { breakpoint: 1024, settings: { dots: true } },
         { breakpoint: 768, settings: { dots: false } }
+    ]
+};
+
+// Facilities slider settings
+const facilitiesSliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0',
+    arrows: true,
+    responsive: [
+        { breakpoint: 1024, settings: { slidesToShow: 3, centerMode: true } },
+        { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false } },
+        { breakpoint: 640, settings: { slidesToShow: 1, centerMode: false } }
     ]
 };
 
@@ -56,9 +74,9 @@ const HomePage = () => {
                                 <h1 className="mb-4 text-5xl font-bold md:text-6xl drop-shadow-lg">Welcome to Our Luxury Hotel</h1>
                                 <p className="mb-8 text-xl md:text-2xl drop-shadow-md">Experience unparalleled comfort and exquisite service.</p>
                                 <Link to="/contact">
-                                <button className="px-8 py-3 font-semibold text-blue-700 transition duration-300 bg-white rounded-lg shadow-md hover:bg-blue-100">
-                                    Book Now
-                                </button>
+                                    <button className="px-8 py-3 font-semibold text-blue-700 transition duration-300 bg-white rounded-lg shadow-md hover:bg-blue-100">
+                                        Book Now
+                                    </button>
                                 </Link>
                             </div>
                         </div>
@@ -81,9 +99,29 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+            <div className="py-16">
+                <div className="container px-6 mx-auto text-center">
+                    <h2 className="mb-10 text-3xl font-bold text-blue-700">Facilities & Services</h2>
+                    <Slider {...facilitiesSliderSettings}>
+                        {facilitiesData.map((facility, idx) => (
+                            <div key={idx} className="px-3">
+                                <div className="flex flex-col items-center p-6 transition duration-300 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                    <div className="w-full overflow-hidden rounded-lg">
+                                        <img
+                                            src={facility.image}
+                                            alt={facility.name}
+                                            className="object-cover w-full h-56 transition-opacity duration-300 ease-in-out opacity hover:opacity-100"
+                                        />
+                                    </div>
+                                    <h3 className="mt-6 text-xl font-semibold text-center text-blue-700">{facility.name}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
+            </div>
             <div className="py-16 bg-transparent">
                 <div className="container px-4 mx-auto text-center">
-                    {/* <h2 className="mb-8 text-3xl font-bold text-blue-700">Hotel at a Glance</h2> */}
                     <div className="grid max-w-5xl grid-cols-1 gap-8 mx-auto md:grid-cols-3">
                         <div className="p-6 transition duration-300 transform bg-white bg-opacity-50 shadow-lg backdrop-blur-md rounded-xl hover:scale-105">
                             <p className="text-4xl font-bold text-blue-700">150K+</p>
